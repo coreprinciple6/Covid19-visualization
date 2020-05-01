@@ -1,0 +1,46 @@
+html, body,.cover {
+    height: 100%;
+    background-color: #010200;
+}
+.navbar {
+    background: transparent;
+}
+.navbar .navItems a:hover {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.cover .imageDiv {
+    height: 500px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 25px ;
+
+}
+.cover .imageDiv img {
+    height:350px;
+    width: 350px;
+}
+
+.infectedDetail {
+    height: 500px;
+    padding-top: 100px;
+    padding-right: 100px;
+    color: teal;
+    margin: 0 auto;
+    text-align: left;
+    opacity: 100%;
+    animation-name: infectedAnimate;
+    animation-duration: 4s;
+    animation-iteration-count: 0;
+}
+.coverBtn {
+    margin: 15px 0px 0px 0px
+}
+/*animations*/
+@keyframes infectedAnimate {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+    
+}

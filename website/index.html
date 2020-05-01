@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <link rel="stylesheet" href="./index.css" type="text/css"> 
+        
+</head>
+<body>    
+    <nav class="navbar" >
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type = "button" class="navbar-toggle collapsed" data-toggle = "collapse" data-target = "#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand navbar-right" href="">Covid4U</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+
+                <ul class="nav navbar-nav navbar-right navItems">
+                    <li class="active"><a href="">Home</a> </li>
+                    <li><a href="">About</a> </li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Our Team</a></li>
+                    <li><a href="">Contact</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class= 'container-fluid'>
+        <div class='cover'>
+            <div class="row">
+                <div class="imageDiv col-sm-6">
+                    <img class="imageCover" src="../pictures/giphy.gif">
+                </div>
+                <div class='titleDiv col-sm-6'>
+                    <div class="infectedDetail">
+                            <h3>Total Infected : </h3>
+                            <h3>Total Deaths: </h3>
+                            <h3>Recovered : </h3>
+                            <button class="coverBtn btn btn-info btn-lg" >Get the latest numbers</button>
+                    </div>
+                    
+                </div> 
+            </div>
+        </div>
+
+    <div class="map">
+        <section class="map">
+            <div class="folium-map" id="map_82098b9f1aa448a0a752d0eb11561c42" ></div>
+        </section>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
