@@ -3,7 +3,7 @@ html, body,.cover {
     background-color: #010200;
 }
 .navbar {
-    background: transparent;
+    background: #010200;
 }
 .navbar .navItems a:hover {
     text-decoration: none;
@@ -15,21 +15,36 @@ html, body,.cover {
     width: 50px;
 }
 
-.cover .imageDiv {
-    height: 500px;
+.cover  {
     text-align: center;
     margin: 0 auto;
     padding: 25px ;
 
 }
-.cover .imageDiv img {
-    height:350px;
-    width: 350px;
+.cover h2 {
+    color: teal;
+    padding: 25px 25px 25px 10px;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+.cover .headerUnderline {
+    margin: 0px auto 50px;
+    background-color: teal;
+    height: 2px;
+    width: 320px;
+    border-radius: 30px;
+    position: relative;
+    animation-name: headerUnderline;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
 }
 #map_82098b9f1aa448a0a752d0eb11561c42 {
-    height: 500px;
-    width: 500px;
+    padding: 25px;
+    height:500px;
+    width: 1000px;
     margin: 0 auto;
+    border: 1px solid teal;
 }
 
 .infectedDetail {
@@ -47,9 +62,25 @@ html, body,.cover {
 .coverBtn {
     margin: 15px 0px 0px 0px
 }
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: teal;
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+.footer em {
+    color: black;
+}
 /*animations*/
 @keyframes infectedAnimate {
     from {opacity: 0%;}
     to {opacity: 100%;}
     
+}
+@keyframes headerUnderline {
+    from {right: 500px;}
+    to {right:  0px;}
 }
