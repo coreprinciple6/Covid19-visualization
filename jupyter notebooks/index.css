@@ -10,6 +10,10 @@ html, body,.cover {
     font-size: 20px;
     background-color: transparent;
 }
+.navImage { 
+    height: 50px;
+    width: 50px;
+}
 
 .cover .imageDiv {
     height: 500px;
@@ -21,6 +25,11 @@ html, body,.cover {
 .cover .imageDiv img {
     height:350px;
     width: 350px;
+}
+#map_82098b9f1aa448a0a752d0eb11561c42 {
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
 }
 
 .infectedDetail {
