@@ -21,13 +21,13 @@ html, body,.cover {
     padding: 25px ;
 
 }
-.cover h2 {
+.coverHeader {
     color: teal;
     padding: 25px 25px 25px 10px;
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
 }
-.cover .headerUnderline {
+.headerUnderline {
     margin: 0px auto 50px;
     background-color: teal;
     height: 2px;
@@ -62,9 +62,63 @@ html, body,.cover {
 .coverBtn {
     margin: 15px 0px 0px 0px
 }
+/*Contact*/
+.contact {
+    background: url('../pictures/contact-Covid_Visuals22.jpg');
+    background-size: cover;
+    text-align: center;
+    margin: 10px 0px 0px 15px;
+}
+.contact .headerUnderlineContact {
+    margin: 0px auto 50px;
+    background-color: teal;
+    height: 2px;
+    width: 180px;
+    border-radius: 30px;
+    position: relative;
+    animation-name: headerUnderline;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+}
+.contact form {
+    margin: 0 auto;
+    padding: 25px;
+    width: 350px;
+}
+.contact form p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: black;
+}
+.contact form input{
+    background: black;
+}
+.contact form textarea {
+    background-color: black;
+}
+
+form button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+    text-align: center;
+    padding: 2px;
+    margin: 16px;
+    width: 150px;
+    height: 40px;
+    color: black;
+    font-size: large;
+}
+form button:hover {
+    background-color: black;
+    color: teal;
+}
+
+/*footer*/
 .footer {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: teal;
+    background-color: #010200;
     padding: 10px;
     height: 40px;
     text-align: center;
@@ -72,7 +126,7 @@ html, body,.cover {
     font-size: 16px;
 }
 .footer em {
-    color: black;
+    color: teal;
 }
 /*animations*/
 @keyframes infectedAnimate {
