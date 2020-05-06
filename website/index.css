@@ -1,6 +1,6 @@
-html, body,.cover {
+html, body, #map {
     height: 100%;
-    background-color: #010200;
+    width: 100%;
 }
 .navbar {
     background: #010200;
@@ -10,22 +10,35 @@ html, body,.cover {
     font-size: 20px;
     background-color: transparent;
 }
-.navImage { 
-    height: 50px;
-    width: 50px;
+.headerPic { 
+    height: 100px;
+    width: 100px;
+    float: left;
 }
 
-.cover  {
+#map  {
+    background: url('../pictures/cover-bg.jpg');
+    background-size: 1500px 500px;
+    height: 500px;
     text-align: center;
     margin: 0 auto;
     padding: 25px ;
-
+    color: #bef243;
 }
 .coverHeader {
-    color: teal;
-    padding: 25px 25px 25px 10px;
+    color: white;
+    padding: 40px 25px 25px 10px;
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 32px;
+    font-weight: bold;
+
+}
+.subHeaderText {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: teal;
+
 }
 .headerUnderline {
     margin: 0px auto 50px;
@@ -41,30 +54,73 @@ html, body,.cover {
 }
 #map_82098b9f1aa448a0a752d0eb11561c42 {
     padding: 25px;
-    height:500px;
-    width: 1000px;
+    height: 350px;
+    width: 600px;
     margin: 0 auto;
-    border: 1px solid teal;
+    border: 1px solid black;
+}
+.learnMoreBtn {
+    color: teal;
+    font-size: 18px;
+    background-color: white;
+    width: 120px;
+    border: 1px solid black;
+    border-radius: 5px ;
+    padding: 5px;
+}
+.measuresBtn {
+    background: teal;
+    color: white;
+    width: 100px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px ;
 }
 
-.infectedDetail {
-    height: 500px;
-    padding-top: 100px;
-    padding-right: 100px;
-    color: teal;
+/*Congtagious*/
+.contagious {
+    text-align: center;
+    width: 100%;
+    float: center;
     margin: 0 auto;
-    text-align: left;
-    opacity: 100%;
-    animation-name: infectedAnimate;
-    animation-duration: 4s;
-    animation-iteration-count: 0;
+    padding: 20px;
 }
-.coverBtn {
-    margin: 15px 0px 0px 0px
+.headerContainer {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: indigo;
+}
+.card {
+    border: 1px solid white;
+    box-shadow: 2px  #E6E6E6;
+    padding: 5px;
+    margin: 5px ;
+    height: 250px;
+}
+.card h2 {
+    font-size: 20px;
+    color: indianred;
+}
+.contagious p {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+}
+.card img {
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    float: center;
+}
+/*Prevention*/
+.prevention {
+    text-align: center;
+    padding: 100px 0px 0px 0px;
 }
 /*Contact*/
 .contact {
-    background: url('../pictures/contact-Covid_Visuals22.jpg');
+    background: white;
     background-size: cover;
     text-align: center;
     margin: 10px 0px 0px 15px;
