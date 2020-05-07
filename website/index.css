@@ -36,7 +36,7 @@ html, body, .cover {
 }
 #map_192f555618c74b48ba8701d94405ce7b {
     height: 640px;
-    width: 1200px;
+    width: 980px;
     border: 1px solid black;
 }
 .source {
@@ -144,7 +144,7 @@ form button:hover {
     font-size: 16px;
 }
 .footer em {
-    color: teal;
+    color: #bef243;
 }
 /*animations*/
 @keyframes infectedAnimate {
