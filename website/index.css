@@ -1,63 +1,49 @@
-html, body, #map {
+html, body, .cover {
     height: 100%;
     width: 100%;
-}
-.navbar {
-    background: #010200;
-}
-.navbar .navItems a:hover {
-    text-decoration: none;
-    font-size: 20px;
-    background-color: transparent;
+    background: black;
 }
 .headerPic { 
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     float: left;
 }
-
-#map  {
-    background: url('../pictures/cover-bg.jpg');
-    background-size: 1500px 500px;
-    height: 500px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 25px ;
-    color: #bef243;
+.cover {
+    padding: 10px;
+    opacity: 80%;
 }
 .coverHeader {
     color: white;
-    padding: 40px 25px 25px 10px;
-    margin: 0 auto;
+    margin: 10px auto;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 32px;
-    font-weight: bold;
-
+    font-size: 20px;
+    display: inline-block;
+}
+.covid {
+    border-right: 1px solid #bef243;
+    padding: 2px;
+    padding-right: 3px;
+}
+.bd {
+    padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .subHeaderText {
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    color: teal;
+    color: #bef243;
 
 }
-.headerUnderline {
-    margin: 0px auto 50px;
-    background-color: teal;
-    height: 2px;
-    width: 320px;
-    border-radius: 30px;
-    position: relative;
-    animation-name: headerUnderline;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-
-}
-#map_82098b9f1aa448a0a752d0eb11561c42 {
-    padding: 25px;
-    height: 350px;
-    width: 600px;
-    margin: 0 auto;
+#map_192f555618c74b48ba8701d94405ce7b {
+    height: 640px;
+    width: 1200px;
     border: 1px solid black;
+}
+.source {
+    padding-top: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: white;
+    font-size: 12px;
 }
 .learnMoreBtn {
     color: teal;
@@ -69,7 +55,7 @@ html, body, #map {
     padding: 5px;
 }
 .measuresBtn {
-    background: teal;
+    background: #bef243;
     color: white;
     width: 100px;
     font-size: 18px;
@@ -77,46 +63,22 @@ html, body, #map {
     border: 1px solid black;
     border-radius: 5px ;
 }
-
-/*Congtagious*/
-.contagious {
+.infectedInfo {
+    height: 100px;
     text-align: center;
-    width: 100%;
-    float: center;
-    margin: 0 auto;
-    padding: 20px;
+    width: 250px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.headerContainer {
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: indigo;
+.infectedInfo em {
+    font-size: 60px;
+    padding: 25px;
+    color: #bef243;
 }
-.card {
-    border: 1px solid white;
-    box-shadow: 2px  #E6E6E6;
-    padding: 5px;
-    margin: 5px ;
-    height: 250px;
-}
-.card h2 {
-    font-size: 20px;
-    color: indianred;
-}
-.contagious p {
-    font-size: 16px;
-    font-weight: bold;
-    padding: 15px;
-}
-.card img {
-    height: 80px;
-    width: 80px;
-    margin: 0 auto;
-    float: center;
-}
-/*Prevention*/
-.prevention {
-    text-align: center;
-    padding: 100px 0px 0px 0px;
+.infectedInfo span {
+    font-size: 12px;
+    font-family: italic;
 }
 /*Contact*/
 .contact {
