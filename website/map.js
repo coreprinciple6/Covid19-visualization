@@ -1,1 +1,1 @@
-$('#map_82098b9f1aa448a0a752d0eb11561c42').fadeIn(4000)
+$('.folium-map').fadeIn('slow',400)
