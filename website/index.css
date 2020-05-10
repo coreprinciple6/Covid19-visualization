@@ -8,7 +8,9 @@ html, body, .cover {
     width: 50px;
     float: left;
 }
-
+.cover {
+    height: 670px;
+}
 .coverHeader {
     color: white;
     margin: 10px auto;
@@ -16,13 +18,36 @@ html, body, .cover {
     font-size: 20px;
     display: inline-block;
 }
+/*side bar */
+.sideBar {
+    background: transparent;
+    margin-top: 60px;
+    border-radius: 20px;
+    text-align: center;
+}
+.sideBar p {
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #bef243;
+    
+}
 .covid {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
     border-right: 1px solid #bef243;
     padding: 2px;
-    padding-right: 3px;
+    padding-right: 6px;
 }
 .bd {
-    padding: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    display: inline-block;
+    color: white;
+    padding: 4px 4px 0px 4px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .subHeaderText {
@@ -31,39 +56,16 @@ html, body, .cover {
     color: #bef243;
 
 }
-.mapDiv {
-    height: 600;
-    
-}
 #map_192f555618c74b48ba8701d94405ce7b {
     height: 640px;
-    width: 980px;
-    overflow: hidden;
-    border-radius: 5px;
+    width: 1360px;
+    border-radius: 0px 0px 50px 50px ;
 }
 .source {
     padding-top: 5px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     color: white;
     font-size: 12px;
-}
-.learnMoreBtn {
-    color: teal;
-    font-size: 18px;
-    background-color: white;
-    width: 120px;
-    border: 1px solid black;
-    border-radius: 5px ;
-    padding: 5px;
-}
-.measuresBtn {
-    background: #bef243;
-    color: white;
-    width: 100px;
-    font-size: 18px;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px ;
 }
 .infectedInfo {
     height: 500px;
@@ -82,6 +84,20 @@ html, body, .cover {
 .infectedInfo span {
     font-size: 12px;
     font-family: italic;
+}
+/*layers*/
+.justThings {
+    height: 400px;
+    width: 1380px;
+    background-color: black;
+    position: relative;
+    left: 0px;
+    bottom: 50px; 
+}
+.layer-2 img{
+    position: relative;
+    bottom: 350px;
+    left: 350px;
 }
 /*Scroll Bar*/
 /* width */
@@ -109,7 +125,14 @@ html, body, .cover {
 .numbers{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(to bottom black , #00d00d);
+    height: 400px;
+    width: 1380px;
+    background-color: black;
+    opacity: 80%;
+    position: relative;
+    left: 0px;
+    bottom: 150px; 
+
 }
 .numbers h1 {
     color: #bef243;
@@ -121,7 +144,23 @@ html, body, .cover {
     color: white;
     font-size: 20px;
     font-style: italic;
-
+}
+.card-1 h1{
+    position: relative;
+    animation-name: card1;
+    animation-duration: 1s ;
+    animation-timing-function: ease-in;
+}
+.leaflet-container {
+    z-index: 0;
+	overflow: hidden;
+	}
+.card-2 h1 {
+    position: relative;
+    animation-name: card1;
+    animation-duration: 1s ;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
 }
 /*Contact*/
 .contact {
@@ -207,14 +246,4 @@ form button:hover {
 footer h2:hover {
     color: #bef243;
     font-size: 22px;
-}
-/*animations*/
-@keyframes infectedAnimate {
-    from {opacity: 0%;}
-    to {opacity: 100%;}
-    
-}
-@keyframes headerUnderline {
-    from {right: 500px;}
-    to {right:  0px;}
 }

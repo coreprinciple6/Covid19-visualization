@@ -9,6 +9,7 @@
 
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
@@ -21,38 +22,45 @@
         <div class= 'container-fluid'>
             <div class='cover'>
                 <div class="row">
-                    <div class="col-lg-3 sideBar">
-                        <img class='headerPic' src="../pictures/giphy.gif">
-                        <h2 class="coverHeader covid">Covid-19</h2>
-                        <h2 class="coverHeader bd">Bangladesh</h2>
+                    <div class="col-lg-9">
+                        <div class="folium-map" id="map_192f555618c74b48ba8701d94405ce7b" ></div>
+                    </div>
+                    <div class=" col-lg-3 sideBar">
+                        <!--add logo here with class headerPic-->
+                        <h2 class="covid">Covid-19</h2>
+                        <h2 class="bd">Bangladesh</h2>
                         <br><br>
-                    </div>
-                    <div class="col-lg-9 ">
-                        <div class="mapDiv">
-                        <div class="folium-map" id="map_192f555618c74b48ba8701d94405ce7b" >                    </div>
-                    </div>
+                        <p>Map</p>
+                        <br>
+                        <p>Graph</p>
+                        <br>
+                        <p>Data</p>
+                        <br>
+                        <p>Numbers</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="justThings"> 
         <section class="numbers">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 card-1">
                     <h1>10680</h1>
                     <p>number of confirmed cases</p>
                 </div>
-                <div class="col-lg-4 ">
+                <div class="col-lg-4 card-2">
                     <h1>485</h1>
                     <p> number of deaths </p>
                 </div>
-                <div class="col-lg-4 ">
+                <div class="col-lg-4 card-3">
                     <h1>1350</h1>
                     <p>recovered completely</p>
                 </div>
             </div>
         </div>
         </section>
+        </div>
   <!--  <section class="contagious" id="contagious">
         <div class="container">
             <h2 class="headerContainer">Contagious Corona</h2>
@@ -156,22 +164,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
 <script src="./map.js"></script>
 
-<script>
+<script>            
             var map_192f555618c74b48ba8701d94405ce7b = L.map(
                 "map_192f555618c74b48ba8701d94405ce7b",
                 {
                     center: [23.777176, 90.399452],
                     crs: L.CRS.EPSG3857,
-                    zoom: 8,
+                    zoom: 7,
                     zoomControl: true,
-                    preferCanvas: false,
+                    preferCanvas: true,
                 }
             );
-
-            
-
-        
-    
             var tile_layer_cee25d62c9d44c4f8288e973745bf0b2 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
