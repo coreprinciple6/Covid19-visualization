@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 <head>    
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> 
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script>
             L_NO_TOUCH = false;
@@ -58,6 +59,9 @@
                     <p>recovered completely</p>
                 </div>
             </div>
+        </div>
+        <div>
+            <canvas  id="myChart"></canvas>
         </div>
         </section>
         </div>
@@ -1076,4 +1080,82 @@
                 {"sticky": true}
             );
         
+
+
+
+                 ///   using chart.js for graphs
+                 let myChart = document.getElementById('myChart').getContext('2d');
+
+// Global Options
+Chart.defaults.global.defaultFontFamily = 'Lato';
+Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontColor = '#777';
+
+
+let massPopChart = new Chart(myChart, {
+type:'polarArea', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+data:{
+ labels:['Total Cases', 'Total Deaths', 'Total Recoveries','Number of Isolation',
+'Medical Team','Total Lab Tests'],
+ datasets:[{
+   label:'Covid19 Current Statistics',
+   data:[
+   10680,
+   250,
+   2902,
+   2236,
+   2680,
+   7208
+     
+   ],
+   //backgroundColor:'green',
+   backgroundColor:[
+     'rgb(169, 240, 2)',
+     'rgb(179, 242, 29)',
+     'rgb(190, 242, 67)',
+     'rgb(219, 250, 147)',
+     'rgb(244, 252, 225)',
+     'rgb(255, 255, 225)'
+
+   ],
+   borderWidth:1,
+   borderColor:'#050505',
+   hoverBorderWidth:2,
+   hoverBorderColor:'#bef243',
+ }]
+},
+options:{
+ scale: {
+ display: false
+},
+animations :{
+ animateRotate: true,
+ animateScale : true,
+ duration: 10
+},
+ title:{
+   display:true,
+   text:'Covid19 Current Statistics',
+   fontSize:25
+ },
+ legend:{
+   display:true,
+  
+   labels:{
+     fontColor:'#FFF'
+   }
+ },
+ layout:{
+   padding:{
+     left:50,
+     right:0,
+     bottom:0,
+     top:0
+   }
+ },
+ tooltips:{
+   enabled:true
+ }
+}
+});
 </script>
