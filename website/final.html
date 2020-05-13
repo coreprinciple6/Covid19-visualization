@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+
         <div class="justThings"> 
         <section class="numbers">
         <div class="container">
@@ -60,86 +61,26 @@
                 </div>
             </div>
         </div>
-        <div>
-            <canvas  id="myChart"></canvas>
-        </div>
+    </section>
+    </div>
 
-        <div>
-            <canvas id="canvas"></canvas>
-        </div>
+        <section class="graphs">
+            <div class='container'>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="pieChart">
+                            <canvas  id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="lineGraph">
+                            <canvas id="canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        </div>
-  <!--  <section class="contagious" id="contagious">
-        <div class="container">
-            <h2 class="headerContainer">Contagious Corona</h2>
-            <p>Corona can occur in many number of ways. Here are some of the ways</p>
-            <div class="row">
-                <div class="col-lg-4 ">
-                    <div class="card">
-                        <img src='../pictures/handshake.jpg'>
-                        <div class="cardTextContainer">
-                            <h2>Human Contact</h2>
-                            <p>If a corona positive person comes in contact with another human 
-                                there is a posibility of transmitting the virus
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src='../pictures/things.png'>
-                        <div class="cardTextContainer">
-                            <h2>Contagious Objects</h2>
-                            <p>When a corona positive person touches some objects the virus maybe 
-                                transmitted to the object for some time. The virus can stay on the 
-                                surface for several hours
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <img src="../pictures/air_transmission.jpeg">
-                        <div class="cardTextContainer">
-                            <h2>Air Transmission</h2>
-                            <p>The virus can travel through air for several hours </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="prevention">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <img class = 'docImage' src='../pictures/doctorImage.jpg'>
-                </div>
-                <div class="col-lg-6">
-                    <div class="preventionText">
-                        <h2>Corona Symptoms</h2>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="coverHeader">Contact Us</h2>
-            <div class="headerUnderlineContact"></div>
-            <br>
-            <form class="form-group">
-                <p>Have a question or want to work together?</p><br>
-                <input class="form-control" placeholder="Name"> <br>
-                <input class="form-control"  placeholder="Email"> <br>
-                <textarea class="form-control" placeholder="Type a message here ...."></textarea>
-                <button >Send</button>
-            </form>
-        </div>  
-    </section>
--->
     <div class="footer">
         <footer>
             <div class="container">
@@ -1129,6 +1070,7 @@ data:{
  }]
 },
 options:{
+ maintainAspectRatio: false,
  scale: {
  display: false
 },
@@ -1140,22 +1082,23 @@ animations :{
  title:{
    display:true,
    text:'Covid19 Current Statistics',
-   fontSize:25
+   fontSize:25,
+   fontColor: '#bef243',
  },
  legend:{
    display:true,
   
    labels:{
-     fontColor:'#FFF'
+     fontColor:'white'
    }
  },
  layout:{
    padding:{
-     left:50,
+     left:10,
      right:0,
      bottom:0,
      top:0
-   }
+   },
  },
  tooltips:{
    enabled:true
@@ -1169,7 +1112,8 @@ var lineChartData = {
 			datasets: [{
 				label: ' Confirmed Cases Rate',
 				borderColor: 'red',
-				backgroundColor: 'red',
+                backgroundColor: 'red',
+                fontColor: 'white',
 				fill: false,
 				data: [
 					3,
@@ -1219,19 +1163,22 @@ var lineChartData = {
 		let	myLine = Chart.Line(ctx, {
 				data: lineChartData,
 				options: {
+                    maintainAspectRatio: false,
 					responsive: true,
 					hoverMode: 'index',
 					stacked: false,
 					title: {
 						display: true,
-						text: 'Chart.js Line Chart - Multi Axis'
+                        text: 'Chart.js Line Chart - Multi Axis',
+                        fontColor: '#bef243'
 					},
 					scales: {
 						yAxes: [{
 							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
 							display: true,
 							position: 'left',
-							id: 'y-axis-1',
+                            id: 'y-axis-1',
+                            fontColor: 'white'
 						}, {
 							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
 							display: true,

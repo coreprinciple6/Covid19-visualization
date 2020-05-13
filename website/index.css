@@ -87,7 +87,7 @@ html, body, .cover {
 }
 /*layers*/
 .justThings {
-    height: 400px;
+    height: 50px;
     width: 1380px;
     background-color: black;
     position: relative;
@@ -125,19 +125,19 @@ html, body, .cover {
 .numbers{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 400px;
+    height: 200px;
     width: 1380px;
     background-color: black;
     opacity: 80%;
     position: relative;
     left: 0px;
-    bottom: 150px; 
+    bottom: 120px; 
 
 }
 .numbers h1 {
     color: #bef243;
     font-size: 60px;
-    padding: 25px;
+    padding: 5px 25px;
     font-style: italic;
 }
 .numbers p {
@@ -161,6 +161,10 @@ html, body, .cover {
     animation-duration: 1s ;
     animation-delay: 1s;
     animation-timing-function: ease-in;
+}
+/*Graphs*/ 
+ .graphs .lineGraph , .pieChart {
+   height: 500px;
 }
 /*Contact*/
 .contact {
