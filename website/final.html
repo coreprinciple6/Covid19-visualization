@@ -63,6 +63,10 @@
         <div>
             <canvas  id="myChart"></canvas>
         </div>
+
+        <div>
+            <canvas id="canvas"></canvas>
+        </div>
         </section>
         </div>
   <!--  <section class="contagious" id="contagious">
@@ -1083,8 +1087,8 @@
 
 
 
-                 ///   using chart.js for graphs
-                 let myChart = document.getElementById('myChart').getContext('2d');
+    ///   using chart.js for graphs
+    let myChart = document.getElementById('myChart').getContext('2d');
 
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Lato';
@@ -1158,4 +1162,100 @@ animations :{
  }
 }
 });
+
+//  chart.js line graph
+var lineChartData = {
+			labels: ['March 10th', 'March 20th', 'March 30th', 'April 10th', 'April 20th', 'April 30th', 'May 6th'],
+			datasets: [{
+				label: ' Confirmed Cases Rate',
+				borderColor: 'red',
+				backgroundColor: 'red',
+				fill: false,
+				data: [
+					3,
+					20,
+					49,
+					424,
+					2948,
+					7667,
+					11719
+				],
+				yAxisID: 'y-axis-1',
+			}, {
+				label: 'Total Death Rate',
+				borderColor: 'blue',
+				backgroundColor: 'blue',
+				fill: false,
+				data: [
+					0,
+					1,
+					5,
+					27,
+					101,
+					168,
+					186
+				],
+				yAxisID: 'y-axis-2'
+			},
+            {
+				label: 'Total Recovery Rate',
+				borderColor: 'green',
+				backgroundColor: 'green',
+				fill: false,
+				data: [
+					0,
+					3,
+					19,
+					33,
+					85,
+					160,
+					1780
+				],
+				yAxisID: 'y-axis-3'
+			}]
+		};
+
+			let ctx = document.getElementById('canvas').getContext('2d');
+		let	myLine = Chart.Line(ctx, {
+				data: lineChartData,
+				options: {
+					responsive: true,
+					hoverMode: 'index',
+					stacked: false,
+					title: {
+						display: true,
+						text: 'Chart.js Line Chart - Multi Axis'
+					},
+					scales: {
+						yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'right',
+							id: 'y-axis-2',
+
+							// grid line settings
+							gridLines: {
+								drawOnChartArea: false, // only want the grid lines for one axis to show up
+							},
+						},  {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'right',
+							id: 'y-axis-3',
+
+							// grid line settings
+							gridLines: {
+								drawOnChartArea: false, // only want the grid lines for one axis to show up
+							},
+						}],
+					}
+				}
+			});
+	
+			myLine.update();
 </script>
