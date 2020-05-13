@@ -180,7 +180,7 @@ html, body, .cover {
 .buttonGroup div:hover, div:active {
     font-size: 20px;
     cursor: pointer;
-    background-color: black;
+    background-color:#121212;
     border-right: 1px solid #bef243;
 }
 /*footer*/
