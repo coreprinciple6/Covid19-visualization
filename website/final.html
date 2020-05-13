@@ -63,7 +63,11 @@
         </div>
     </section>
     </div>
-
+    <section class="graphInfo">
+        <div class="graphInfoDiv">
+            Write Your TEXT Here Bitch
+        </div>
+    </section>
         <section class="graphs">
             <div class='container-fluid'>
                 <h2>Graphs and Charts</h2>
@@ -1057,7 +1061,7 @@
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 18;
-Chart.defaults.global.defaultFontColor = '#777';
+Chart.defaults.global.defaultFontColor = 'white';
 
 
 let massPopChart = new Chart(myChart, {
@@ -1078,12 +1082,12 @@ data:{
    ],
    //backgroundColor:'green',
    backgroundColor:[
-     'rgb(169, 240, 2)',
-     'rgb(179, 242, 29)',
-     'rgb(190, 242, 67)',
-     'rgb(219, 250, 147)',
-     'rgb(244, 252, 225)',
-     'rgb(255, 255, 225)'
+     '#024023',
+     '#01A2A6',
+     '#D6532A',
+     '#E02D34',
+     '#B6C932',
+     '#EE3C96'
 
    ],
    borderWidth:1,
@@ -1110,7 +1114,6 @@ animations :{
  },
  legend:{
    display:true,
-  
    labels:{
      fontColor:'white'
    }
@@ -1195,7 +1198,11 @@ var lineChartData = {
 						display: false,
                         text: '',
                         fontColor: '#bef243'
-					},
+					},legend:{
+                        display:true,
+                        labels:{
+                            fontColor:'white'
+                        }},
 					scales: {
 						yAxes: [{
 							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance

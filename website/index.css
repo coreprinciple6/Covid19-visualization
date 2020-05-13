@@ -175,6 +175,7 @@ html, body, .cover {
     text-align: center;
     padding: 25px;
     color: #bef243;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .buttonGroup div:hover, div:active {
