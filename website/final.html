@@ -65,21 +65,30 @@
     </div>
 
         <section class="graphs">
-            <div class='container'>
+            <div class='container-fluid'>
+                <h2>Graphs and Charts</h2>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="pieChart">
-                            <canvas  id="myChart"></canvas>
+                    <div class="col-lg-4">
+                        <div class="buttonGroup">
+                            <div class="pieChartBtn">Numbers through Pie Chart</div>
+                            <div class="lineGraphBtn">Numbers through Line Graphs</div>
+                            <div class="predictedChartBtn">Predicted Numbers</div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="lineGraph">
-                            <canvas id="canvas"></canvas>
+                    <div class="col-lg-8">
+                        <div class="displayGraph">
+                            <div class="lineGraph">
+                                <canvas id="canvas"></canvas>
+                            </div>
+                            <div class="pieChart">
+                                <canvas  id="myChart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
 
     <div class="footer">
         <footer>
@@ -113,7 +122,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
 <script src="./map.js"></script>
 
-<script>            
+<script>
+
+    $('.pieChart').hide()
+    $('.lineGraph').hide()
+
+    $('.pieChartBtn').click(function(){
+        $('.pieChart').show()
+        $('.lineGraph').hide()
+    })            
+    $('.lineGraphBtn').click(function(){
+        $('.lineGraph').show()
+        $('.pieChart').hide()
+    })   
+
             var map_192f555618c74b48ba8701d94405ce7b = L.map(
                 "map_192f555618c74b48ba8701d94405ce7b",
                 {
@@ -1080,8 +1102,8 @@ animations :{
  duration: 10
 },
  title:{
-   display:true,
-   text:'Covid19 Current Statistics',
+   display:false,
+   text:'',
    fontSize:25,
    fontColor: '#bef243',
  },
@@ -1099,6 +1121,7 @@ animations :{
      bottom:0,
      top:0
    },
+   backgroundColor : '#121212' ,
  },
  tooltips:{
    enabled:true
@@ -1139,7 +1162,7 @@ var lineChartData = {
 					168,
 					186
 				],
-				yAxisID: 'y-axis-2'
+				yAxisID: 'y-axis-1'
 			},
             {
 				label: 'Total Recovery Rate',
@@ -1155,7 +1178,7 @@ var lineChartData = {
 					160,
 					1780
 				],
-				yAxisID: 'y-axis-3'
+				yAxisID: 'y-axis-1'
 			}]
 		};
 
@@ -1168,8 +1191,8 @@ var lineChartData = {
 					hoverMode: 'index',
 					stacked: false,
 					title: {
-						display: true,
-                        text: 'Chart.js Line Chart - Multi Axis',
+						display: false,
+                        text: '',
                         fontColor: '#bef243'
 					},
 					scales: {
@@ -1179,26 +1202,6 @@ var lineChartData = {
 							position: 'left',
                             id: 'y-axis-1',
                             fontColor: 'white'
-						}, {
-							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-							display: true,
-							position: 'right',
-							id: 'y-axis-2',
-
-							// grid line settings
-							gridLines: {
-								drawOnChartArea: false, // only want the grid lines for one axis to show up
-							},
-						},  {
-							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
-							display: true,
-							position: 'right',
-							id: 'y-axis-3',
-
-							// grid line settings
-							gridLines: {
-								drawOnChartArea: false, // only want the grid lines for one axis to show up
-							},
 						}],
 					}
 				}
