@@ -125,7 +125,7 @@ html, body, .cover {
 .numbers{
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    height: 200px;
+    height: 150px;
     width: 1380px;
     background-color: black;
     opacity: 80%;
@@ -162,10 +162,38 @@ html, body, .cover {
     animation-delay: 1s;
     animation-timing-function: ease-in;
 }
-/*Graphs*/ 
+/*graphInfo */
+.graphInfo {
+    width: 100%;
+    padding: 25px;
+    height: 250px;
+    background-color: white;
+    border-top: 3px solid #bef243;
+}
+.graphInfoDiv .quote {
+    font-size: 30px;
+    padding: 25px;
+    text-align: center;
+    text-decoration: italic;
+}
 
+
+/*Graphs*/ 
+.graphs {
+    background: url('../pictures/graphWM_2.jpg');
+    background-size: cover ;
+    height: 500px;
+}
 .graphs .lineGraph , .pieChart {
    height: 300px;
+}
+.graphHeader {
+    padding: 20px;
+    padding-left: 50px;
+    color: #bef243;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .buttonGroup div {
     height: 100px;
@@ -178,16 +206,40 @@ html, body, .cover {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.buttonGroup div:hover, div:active {
+.buttonGroup div:hover {
     font-size: 20px;
     cursor: pointer;
     background-color:#121212;
     border-right: 1px solid #bef243;
 }
+.tv {
+    height: 450px;
+    width: 100vw;
+    text-align: center;
+}
+.displayGraph {
+    height: 390px;
+    width: 490px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 20px solid black;
+    background: white;
+    position: relative;
+    bottom: 130px;
+    left: 320px;
+
+}
+.tvHandle{
+   position: absolute;
+   top: 20px;
+   left: 165px;
+    
+}
+
 /*footer*/
-.footer {
+footer {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #010200;
+    background-color: #121212;
     padding: 10px;
     height: 40px;
     text-align: center;

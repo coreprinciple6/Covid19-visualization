@@ -43,49 +43,60 @@
             </div>
         </div>
 
-        <div class="justThings"> 
+    <div class="justThings"> 
         <section class="numbers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 card-1">
-                    <h1>10680</h1>
-                    <p>number of confirmed cases</p>
-                </div>
-                <div class="col-lg-4 card-2">
-                    <h1>485</h1>
-                    <p> number of deaths </p>
-                </div>
-                <div class="col-lg-4 card-3">
-                    <h1>1350</h1>
-                    <p>recovered completely</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 card-1">
+                        <h1 class="totalCases">10680</h1>
+                        <p>number of confirmed cases</p>
+                    </div>
+                    <div class="col-lg-4 card-2">
+                        <h1 class="totalDeaths">485</h1>
+                        <p> number of deaths </p>
+                    </div>
+                    <div class="col-lg-4 card-3">
+                        <h1 class="totalRecovered">1350</h1>
+                        <p>recovered completely</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
+
     <section class="graphInfo">
-        <div class="graphInfoDiv">
-            Write Your TEXT Here Bitch
+        <div class=" container-fluid graphInfoDiv">
+            <p class="quote"> Some details about the graphs </p>
         </div>
     </section>
+
         <section class="graphs">
             <div class='container-fluid'>
-                <h2>Graphs and Charts</h2>
+                <h2 class='graphHeader'>Comparison Through Charts</h2>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="buttonGroup">
-                            <div class="pieChartBtn">Numbers through Pie Chart</div>
+                            <div class="pieChartBtn active">
+                                <h2></h2>
+                                Numbers through Pie Chart</div>
                             <div class="lineGraphBtn">Numbers through Line Graphs</div>
                             <div class="predictedChartBtn">Predicted Numbers</div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="displayGraph">
-                            <div class="lineGraph">
-                                <canvas id="canvas"></canvas>
+                    <div class="col-lg-9">
+                        <div class="tv">
+                            <div class="displayGraph">
+                                <div class="lineGraph">
+                                    <h4>Line Chart</h4>
+                                    <canvas id="canvas"></canvas>
+                                </div>
+                                <div class="pieChart">
+                                    <h4>Pie Chart</h4>
+                                    <canvas  id="myChart"></canvas>
+                                </div>
                             </div>
-                            <div class="pieChart">
-                                <canvas  id="myChart"></canvas>
+                            <div class="tvHandle">
+                            <img class='tvHandle'src='../pictures/Tv_Handle.png'>
                             </div>
                         </div>
                     </div>
@@ -93,31 +104,11 @@
             </div>
         </section>
 
-
-    <div class="footer">
         <footer>
-            <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <h2 class="footerSubHeader">ABOUT</h2>
-                </div>
-                <div class="col-lg-3">
-                    <h2 class="footerSubHeader">LINKS</h2>
-                    <p class="footerContent">IEDCR</p>
-                </div>
-                <div class="col-lg-3">
-                    <h2 class="footerSubHeader">CONTACT</h2>
-                    <p class="footerContent">Covid-19_Bd@gmail.com</p>
-                
-                </div>
-                <div class="col-lg-3">
-                    <h2 class="footerSubHeader">MORE INFO</h2>
-                    <p></p>
-                </div>
+            <div class="container footer">
+                Covid-19 Bangladesh &copy; <em>2020</em></footer>
             </div>
-            Covid-19 Bangladesh &copy; <em>2020</em></footer>
-            </div>
-    </div>
+            
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
@@ -127,19 +118,6 @@
 <script src="./map.js"></script>
 
 <script>
-
-    $('.pieChart').hide()
-    $('.lineGraph').hide()
-
-    $('.pieChartBtn').click(function(){
-        $('pieChartBtn')
-        $('.pieChart').show()
-        $('.lineGraph').hide()
-    })            
-    $('.lineGraphBtn').click(function(){
-        $('.lineGraph').show()
-        $('.pieChart').hide()
-    })   
 
             var map_192f555618c74b48ba8701d94405ce7b = L.map(
                 "map_192f555618c74b48ba8701d94405ce7b",
@@ -1115,7 +1093,7 @@ animations :{
  legend:{
    display:true,
    labels:{
-     fontColor:'white'
+     fontColor:'black'
    }
  },
  layout:{
@@ -1140,7 +1118,7 @@ var lineChartData = {
 				label: ' Confirmed Cases Rate',
 				borderColor: 'red',
                 backgroundColor: 'red',
-                fontColor: 'white',
+                fontColor: 'black',
 				fill: false,
 				data: [
 					3,
@@ -1197,11 +1175,11 @@ var lineChartData = {
 					title: {
 						display: false,
                         text: '',
-                        fontColor: '#bef243'
+                        fontColor: 'black'
 					},legend:{
                         display:true,
                         labels:{
-                            fontColor:'white'
+                            fontColor:'black'
                         }},
 					scales: {
 						yAxes: [{
@@ -1209,7 +1187,7 @@ var lineChartData = {
 							display: true,
 							position: 'left',
                             id: 'y-axis-1',
-                            fontColor: 'white'
+                            fontColor: 'black'
 						}],
 					}
 				}
