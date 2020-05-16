@@ -77,8 +77,8 @@
                     <div class="col-lg-3">
                         <div class="buttonGroup">
                             <div class="pieChartBtn active">
-                                <h2></h2>
-                                Numbers through Pie Chart</div>
+                                Numbers through Pie Chart
+                            </div>
                             <div class="lineGraphBtn">Numbers through Line Graphs</div>
                             <div class="predictedChartBtn">Predicted Numbers</div>
                         </div>
@@ -86,18 +86,51 @@
                     <div class="col-lg-9">
                         <div class="tv">
                             <div class="displayGraph">
+                                <div class="initialDisplay">
+                                    <p>Select to generate the graphs Here</p>
+                                </div>
                                 <div class="lineGraph">
-                                    <h4>Line Chart</h4>
                                     <canvas id="canvas"></canvas>
                                 </div>
-                                <div class="pieChart">
-                                    <h4>Pie Chart</h4>
+                                <div class='pieChart'>
                                     <canvas  id="myChart"></canvas>
                                 </div>
                             </div>
                             <div class="tvHandle">
                             <img class='tvHandle'src='../pictures/Tv_Handle.png'>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quotes">
+            <div class="container-fluid">
+                <div class="testimonial">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <p class="quotations"> &ldquo;  If we just let the virus go, we are talking of millions
+                                of people being infected and millions of people that can die. &rdquo;</p>
+                                <cite>&mdash; Antonio Guterres</cite>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="testimonialPic" src="../pictures/anton_Gutierez.jpg">
+                            <p class="designation">Secretary-General of the United Nations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <img class="testimonialPic" src="../pictures/Tedhos.jpg">
+                            <p class="designation">Director General of the World Health Organisation</p>
+                        </div>
+                        <div class="col-lg-7">
+                            <p class="quotations"> &ldquo; This is the time for facts, not fear. This is the time for science, 
+                                not rumours. This is the time for solidarity, not stigma.
+                                We are all in this together, and we can only stop it together. &rdquo;</p>
+                                <cite>&mdash; Dr. Tedhos Adhanom Ghebreyesus</cite>
                         </div>
                     </div>
                 </div>
@@ -1039,7 +1072,7 @@
 // Global Options
 Chart.defaults.global.defaultFontFamily = 'Lato';
 Chart.defaults.global.defaultFontSize = 18;
-Chart.defaults.global.defaultFontColor = 'white';
+Chart.defaults.global.defaultFontColor = 'black';
 
 
 let massPopChart = new Chart(myChart, {
@@ -1085,10 +1118,10 @@ animations :{
  duration: 10
 },
  title:{
-   display:false,
-   text:'',
+   display:true,
+   text:'Pie Chart',
    fontSize:25,
-   fontColor: '#bef243',
+   fontColor: 'Black',
  },
  legend:{
    display:true,
@@ -1118,7 +1151,7 @@ var lineChartData = {
 				label: ' Confirmed Cases Rate',
 				borderColor: 'red',
                 backgroundColor: 'red',
-                fontColor: 'black',
+                fontColor: '#bef243',
 				fill: false,
 				data: [
 					3,
@@ -1133,7 +1166,8 @@ var lineChartData = {
 			}, {
 				label: 'Total Death Rate',
 				borderColor: 'blue',
-				backgroundColor: 'blue',
+                backgroundColor: 'blue',
+                fontColor: 'black',
 				fill: false,
 				data: [
 					0,
@@ -1173,9 +1207,10 @@ var lineChartData = {
 					hoverMode: 'index',
 					stacked: false,
 					title: {
-						display: false,
-                        text: '',
-                        fontColor: 'black'
+						display: true,
+                        text: 'Line Chart',
+                        fontColor: 'black',
+                        fontSize: 25,
 					},legend:{
                         display:true,
                         labels:{
@@ -1187,7 +1222,6 @@ var lineChartData = {
 							display: true,
 							position: 'left',
                             id: 'y-axis-1',
-                            fontColor: 'black'
 						}],
 					}
 				}

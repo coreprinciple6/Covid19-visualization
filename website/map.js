@@ -1,13 +1,14 @@
-
+$('.initialDisplay').show()
 $('.pieChart').hide()
 $('.lineGraph').hide()
 
 $('.pieChartBtn').click(function(){
-    $('pieChartBtn')
-    $('.pieChart').show()
+    $('.initialDisplay').hide()
     $('.lineGraph').hide()
+    $('.pieChart').show()
 })            
 $('.lineGraphBtn').click(function(){
+    $('.initialDisplay').hide()
     $('.lineGraph').show()
     $('.pieChart').hide()
 })   
