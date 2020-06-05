@@ -31,20 +31,18 @@
                         <h2 class="covid">Covid-19</h2>
                         <h2 class="bd">Bangladesh</h2>
                         <br><br>
-                        <p>Map</p>
+                        <a href="#data"> <p>Data </p></a>
                         <br>
-                        <p>Graph</p>
+                        <a href="#graph"> <p>Graph </p></a>
                         <br>
-                        <p>Data</p>
-                        <br>
-                        <p>Numbers</p>
+                        <a href="#disclaimer"> <p>Disclaimer </p></a>
                     </div>
                 </div>
             </div>
         </div>
 
     <div class="justThings"> 
-        <section class="numbers">
+        <section  id="data" class="numbers">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 card-1">
@@ -72,13 +70,11 @@
 
         <section class="graphs">
             <div class='container-fluid'>
-                <h2 class='graphHeader'>Comparison Through Charts</h2>
+                <h2 id="graph" class='graphHeader'>Comparison Through Charts</h2>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="buttonGroup">
-                            <div class="pieChartBtn active">
-                                Numbers through Pie Chart
-                            </div>
+                            <div class="pieChartBtn active"> Numbers through Pie Chart</div>
                             <div class="lineGraphBtn">Numbers through Line Graphs</div>
                             <div class="predictedChartBtn">Predicted Numbers</div>
                         </div>
@@ -87,13 +83,16 @@
                         <div class="tv">
                             <div class="displayGraph">
                                 <div class="initialDisplay">
-                                    <p>Select to generate the graphs Here</p>
+                                    <p>Select to Generate the Graphs Here</p>
                                 </div>
                                 <div class="lineGraph">
                                     <canvas id="canvas"></canvas>
                                 </div>
                                 <div class='pieChart'>
                                     <canvas  id="myChart"></canvas>
+                                </div>
+                                <div class='predictedChart'>
+                                 <img src="../pictures/download.png">
                                 </div>
                             </div>
                             <div class="tvHandle">
@@ -138,10 +137,14 @@
         </section>
 
         <footer>
-            <div class="container footer">
-                Covid-19 Bangladesh &copy; <em>2020</em></footer>
+            <div id="disclaimer">
+                <h4>Disclaimer: Data used for the graphs and map were collected up until May 6th,2020.</h4>
+                <h4> Dataset Source: IEDCR</h4>
             </div>
-            
+            <div class="container footer">
+                Covid-19 Bangladesh &copy; <em>2020</em>
+            </div>
+        </footer>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
@@ -1078,8 +1081,7 @@ Chart.defaults.global.defaultFontColor = 'black';
 let massPopChart = new Chart(myChart, {
 type:'polarArea', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
 data:{
- labels:['Total Cases', 'Total Deaths', 'Total Recoveries','Number of Isolation',
-'Medical Team','Total Lab Tests'],
+ labels:['Cases:10680', 'Deaths:250', 'Recoveries: 2902','Isolation:2236'],
  datasets:[{
    label:'Covid19 Current Statistics',
    data:[
@@ -1087,8 +1089,6 @@ data:{
    250,
    2902,
    2236,
-   2680,
-   7208
      
    ],
    //backgroundColor:'green',
@@ -1096,9 +1096,7 @@ data:{
      '#bef243',
      '#01A2A6',
      '#7f8f59',
-     '#d9ebb0',
-     '#e4f564',
-     '#3f540d'
+     '#d9ebb0'
 
    ],
    borderWidth:1,
@@ -1119,14 +1117,15 @@ animations :{
 },
  title:{
    display:true,
-   text:'Pie Chart',
+   text:'C19 Total cases ',
    fontSize:25,
    fontColor: 'Black',
  },
  legend:{
    display:true,
    labels:{
-     fontColor:'black'
+     fontColor:'black',
+     fontSize: 14
    }
  },
  layout:{
@@ -1139,7 +1138,11 @@ animations :{
    backgroundColor : '#121212' ,
  },
  tooltips:{
-   enabled:true
+   enabled:true,
+   titleFontSize: 0,
+            bodyFontSize: 16,
+            bodySpacing: 16,
+            displayColors: false,
  }
 }
 });
@@ -1208,7 +1211,7 @@ var lineChartData = {
 					stacked: false,
 					title: {
 						display: true,
-                        text: 'Line Chart',
+                        text: 'Rate of Cases vs Deaths',
                         fontColor: 'black',
                         fontSize: 25,
 					},legend:{
