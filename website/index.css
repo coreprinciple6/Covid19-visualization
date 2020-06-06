@@ -168,8 +168,8 @@ html, body, .cover {
 /*graphInfo */
 .graphInfo {
     width: 100%;
-    padding: 30px;
-   height: 300px;
+    padding: 50px;
+    height: 350px;
     background-color: white;
     border-top: 3px solid #bef243;
 }
@@ -181,7 +181,7 @@ html, body, .cover {
     line-height: 1.8;
     color: black;
     font-weight: bold;
-    text-shadow: 0px 2px #D3D3D3;
+    text-shadow: 0px 0.5px #D3D3D3;
 }
 
 
@@ -207,7 +207,6 @@ html, body, .cover {
     width: 350px;
     background: transparent;
     font-size: 16px;
-    text-decoration: overline;
     padding: 45px;
     color: #bef243;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -323,7 +322,7 @@ footer h2:hover {
     /* The actual width of the underline stroke we want to render (in pixels).
      * You can modify this, and the sizing and positioning should be calculated
      * accordingly. Again, Don't specify the units! */
-    --underline-width: 12;
+    --underline-width: 5;
     
     /* The colour used to draw the underline. It should match the colour
      * used in the cap images... unfortunately we can't modify the SVG
