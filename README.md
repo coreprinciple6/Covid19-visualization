@@ -24,7 +24,7 @@ Covid19 or the novel corona virus has caused a global state of emergency. In thi
 
 ## Project Description
 ### Technology
-The webpage has been done purely in HTML, CSS and JS. We made use of the [Follium library]([https://pypi.org/project/folium/](https://pypi.org/project/folium/)) to generate the map using the dataset collected. Furthermore, the graphs were made using [Chart.js]([https://www.chartjs.org/](https://www.chartjs.org/))
+The webpage has been done purely in HTML, CSS and JS. We made use of the [Follium](https://pypi.org/project/folium/) library to generate the map using the dataset collected. Furthermore, the graphs were made using [Chart.js](https://www.chartjs.org/)
 
 ### Dataset
 The data was collected from [IEDCR](https://iedcr.gov.bd/), it was then cleaned, processed and then coordinates of each district was added to plot the data on the map. **Note: The data was collected till May 6th, 2020 only.**
