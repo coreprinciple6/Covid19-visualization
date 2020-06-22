@@ -10,6 +10,7 @@
   * [Technical Details](#technology)
   * [Data Collection](#dataset)
   * [Installations](#installations)
+  * [Project Link](#project-link)
 
 
 ## About The Project
@@ -32,3 +33,6 @@ The data was collected from [IEDCR](https://iedcr.gov.bd/), it was then cleaned,
 
 ### Installations
 The project makes use of no extra packages or such and so to view the webpage, clone the repository, navigate to website directory and run the 'final.html' file.
+
+### Project Link
+The project has been deployed on the link https://covid-19-visualisation-b7104.web.app
