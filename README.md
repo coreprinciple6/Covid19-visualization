@@ -1,4 +1,4 @@
-![alt text](pictures/first.png)
+![alt text](website/pictures/first.png)
 # Covid19-Visualization
 
 
